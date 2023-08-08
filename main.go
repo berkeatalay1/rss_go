@@ -39,6 +39,7 @@ func main() {
 	v1Router.Get("/readiness", handler.Readiness)
 	v1Router.Get("/err", handler.Err)
 	v1Router.Post("/users", cfg.CreateUser)
+	v1Router.Get("/users", cfg.GetUserByApiKey)
 
 	r.Mount("/v1", v1Router)
 
